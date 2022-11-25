@@ -5,6 +5,7 @@ pipeline {
     stage('develop') {
       steps {
          echo "this project depeloved"
+         echo "its OK"
       }
     }
 
