@@ -13,7 +13,7 @@ pipeline {
       steps {
         sh '''#!/bin/bash
         sudo docker rm -f  $(docker ps -a -q)
-        docker Build /home/jenkins/workspace/docker-pipline -t webapp
+        docker Build /home/jenkins/workspace/docker-pipline/ -t webapp
         ''' 
       }
     }
