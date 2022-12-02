@@ -13,7 +13,7 @@ pipeline {
       steps {
         echo "project Builded"
         sudo docker rm -f  $(docker ps -a -q)
-        docker Build -t webapp .
+        docker Build . -it webapp 
       }
     }
 
