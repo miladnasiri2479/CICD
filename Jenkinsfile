@@ -11,7 +11,7 @@ pipeline {
 
     stage('Build Image') {
       steps {
-        sh '''
+        sh '''#!/bin/bash
         sudo docker rm -f  $(docker ps -a -q)
         docker Build /home/jenkins/workspace/docker-pipline -t webapp
         ''' 
@@ -20,7 +20,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-         sh '''
+         sh '''#!/bin/bash
          docker run -it --name webapp -p 8083:80 -d webapp
          '''
       }
