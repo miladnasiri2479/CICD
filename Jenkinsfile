@@ -11,16 +11,18 @@ pipeline {
 
     stage('Build Image') {
       steps {
-        echo "project Builded"
+        sh '''
         sudo docker rm -f  $(docker ps -a -q)
-        docker Build -t webapp .
+        docker Build /home/jenkins/workspace/docker-pipline -t webapp
+        ''' 
       }
     }
 
     stage('deploy') {
       steps {
-         echo "this is step deploy in production"
+         sh '''
          docker run -it --name webapp -p 8083:80 -d webapp
+         '''
       }
     }
   }
