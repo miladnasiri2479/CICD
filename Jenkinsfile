@@ -1,5 +1,5 @@
 pipeline {
-  agent any
+  agent server
 
   stages {
     stage('CHEACK OUT GITHUB') {
