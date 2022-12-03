@@ -1,5 +1,7 @@
 pipeline {
-  agent server
+  agent{
+        label "server"
+    }
 
   stages {
     stage('CHEACK OUT GITHUB') {
@@ -11,13 +13,13 @@ pipeline {
 
     stage('Build Image') {
       steps {
-       echo helloworld
+       echo "helloworld"
       }
     }
 
     stage('deploy') {
       steps {
-         echo end this
+         echo "end this"
       }
     }
   }
