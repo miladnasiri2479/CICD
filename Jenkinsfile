@@ -41,8 +41,7 @@ pipeline {
     stage('deploy') {
       steps {
 
-         sh "docker rm -f $(docker ps -a -q)"
-         sh "docker run -d -p 8083:80 --name webapp webapp"
+         sh "docker rm -f $(docker ps -a -q) && docker run -d -p 8083:80 --name webapp webapp"
          
       }
     }
