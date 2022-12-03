@@ -23,7 +23,7 @@ pipeline {
 
          sh '''
           docker rm -f $(docker ps -a -q) 
-          docker run -d -p 8083:80 --name webapp webapp 
+          docker run -d -p 80:80 --name webapp webapp 
           '''
          
       }
