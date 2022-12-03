@@ -19,7 +19,7 @@ pipeline {
 
     stage('deploy') {
       steps {
-         echo "end this pipline"
+         echo "end this pipline !!"
       }
     }
   }
