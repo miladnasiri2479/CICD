@@ -6,8 +6,7 @@ pipeline {
   stages {
     stage('build image') {
       steps {
-         sh "
-         git clone https://github.com/miladnasiri2479/CICD.git"
+         git branch: 'main', credentialsId: '33821f38-5247-41fc-9660-1744dbe388b7', url: 'https://github.com/miladnasiri2479/CICD'
           
       }
     }
