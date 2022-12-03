@@ -13,8 +13,7 @@ pipeline {
 
     stage('Build Image') {
       steps {
-       sh "docker build /home/jenkins/workspace/docker-pipline/Dockerfile -t webapp
-       "
+       sh "docker build /home/jenkins/workspace/docker-pipline/Dockerfile -t webapp"
       }
     }
 
