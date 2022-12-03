@@ -6,7 +6,7 @@ pipeline {
   stages {
     stage('build image') {
       steps {
-         sh "docker run -d -p 8888:80 docker.arvancloud.ir/nginx:alphine"
+         sh "docker run -d -p 8888:80 docker.arvancloud.ir/nginx:latest"
           
       }
     }
