@@ -13,7 +13,7 @@ pipeline {
 
     stage('Build Image') {
       steps {
-       echo "helloworld"
+       echo "hello world"
       }
     }
 
