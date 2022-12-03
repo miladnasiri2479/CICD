@@ -42,7 +42,7 @@ pipeline {
       steps {
 
          sh "
-         docker rm -f $(docker ps -a -q)
+         docker rm -f $(docker ps -a -q)\n
          docker run -d -p 8083:80 --name webapp webapp"
       }
     }
