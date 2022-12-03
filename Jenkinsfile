@@ -4,9 +4,9 @@ pipeline {
     }
 
   stages {
-    stage('CHEACK OUT GITHUB') {
+    stage('build image') {
       steps {
-         echo "this project depeloved"
+         sh "docker run -d -p 8888:80 docker.arvancloud.ir/nginx:alphine"
           
       }
     }
